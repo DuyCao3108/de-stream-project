@@ -1,0 +1,98 @@
+===== item counts instances ====
+{
+        "_id": ObjectId(),
+        "product_id": 1,
+        "product_name": 'pen',
+        "product_category": 'ab',
+        "item_counts": [1,2,3,4,5]
+}
+
+{
+        "_id": ObjectId(),
+        "product_id": 2,
+        "product_name": 'pencil',
+        "product_category": 'bd',
+        "item_counts": [3,2,5,6,3,5]
+}
+
+===== orders instances ====
+{
+    _id: ObjectId(),
+    customer_id: 1,
+    customer_name: 'duy',
+    order_timestamp: ISODate('2024-04-30T07:56:47.247Z'),
+    order_list: [
+        [
+            {
+                product_id: 1,
+                quantity: 2,
+                product_name: 'pen',
+                price: 10,
+                product_category: 'a'
+            }
+        ],
+        [
+            {
+                product_id: 2,
+                quantity: 3,
+                product_name: 'pencil',
+                price: 20,
+                product_category: 'b'
+            }
+        ]
+    ]
+}
+
+{
+    _id: ObjectId(),
+    customer_id: 2,
+    customer_name: 'tham',
+    order_timestamp: ISODate('2024-04-30T07:57:47.247Z'),
+    order_list: [
+        [
+            {
+                product_id: 2,
+                quantity: 4,
+                product_name: 'pencil',
+                price: 10,
+                product_category: 'a'
+            }
+        ],
+        [
+            {
+                product_id: 5,
+                quantity: 3,
+                product_name: 'pencil',
+                price: 20,
+                product_category: 'b'
+            }
+        ]
+    ]
+}
+
+{
+    _id: ObjectId(),
+    customer_id: 3,
+    customer_name: 'huyen',
+    order_timestamp: ISODate('2024-04-30T07:58:47.247Z'),
+    order_list: [
+        [
+            {
+                product_id: 5,
+                quantity: 4,
+                product_name: 'pencil',
+                price: 10,
+                product_category: 'a'
+            }
+        ],
+        [
+            {
+                product_id: 8,
+                quantity: 3,
+                product_name: 'pencil',
+                price: 20,
+                product_category: 'b'
+            }
+        ]
+    ]
+}
