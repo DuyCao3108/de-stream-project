@@ -1,0 +1,36 @@
+CREATE TABLE public.customer
+(
+    customer_id integer,
+    customer_name text NOT NULL,
+    PRIMARY KEY (customer_id)
+);
+
+ALTER TABLE IF EXISTS public.customer
+    OWNER to postgres;
+
+
+CREATE TABLE public.product
+(
+    product_id integer,
+    product_category text NOT NULL,
+    price double precision NOT NULL,
+    PRIMARY KEY (product_id)
+);
+
+ALTER TABLE IF EXISTS public.product
+    OWNER to postgres;
+
+
+
+
+
+-- INSERTING SOME DATA
+INSERT INTO public.customer(
+	customer_id, customer_name)
+	VALUES (1, 'duy'), (2, 'tham');
+
+INSERT INTO public.product(
+	product_id, product_name, price)
+	VALUES (1, 'pen', 10), (2, 'pencil', 20);
+
+

@@ -3,7 +3,7 @@ services:
 
   fastapi:
     build:
-      context: ./client-side/fastapi
+      context: ./client/fastapi
       dockerfile: dockerfile
     ports:
       - '80:80'
