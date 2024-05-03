@@ -1,9 +1,9 @@
 # Giới thiệu project
 
-> [!NOTE] Note
+> Note
 > Nếu như không có nhu cầu tìm hiểu về chi tiết hoặc muốn xem demo luôn, bạn có thể click vào 2 đường link sau để xem demo thực của project.
-> - Demo 1 - streaming pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo1-done.mp4)
-> - Demo 2 - batching pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo2-done.mp4)
+> **- Demo 1 - streaming pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo1-done.mp4)**
+> **- Demo 2 - batching pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo2-done.mp4)**
 
 ## Tóm tắt project
 Project là một data pipeline xử lý được đồng thời dữ liệu stream và dữ liệu batch theo cấu trúc micro-services. Các công cụ thịnh hành hiện giờ trong xử lý big data được sử dụng, ví dụ như spark và kafka,... Dữ liệu đầu vào không có thực mà được giả lập.
