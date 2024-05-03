@@ -1,2 +1,1 @@
-- run sending-api first, run streamlit dashboard last 
-- schedule_interval should equal to WINDOW 
+
