@@ -1,8 +1,29 @@
-# Streaming project
+# Giới thiệu project
 
-## header
+> [!NOTE] Note
+> Nếu như không có nhu cầu tìm hiểu về chi tiết hoặc muốn xem demo luôn, bạn có thể click vào 2 đường link sau để xem demo thực của project.
+> - Demo 1 - streaming pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo1-done.mp4)
+> - Demo 2 - batching pipeline: [here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo2-done.mp4)
 
-<aside>
-💡 go to this video [[here](https://record-project.s3.ap-southeast-2.amazonaws.com/demo1-done.mp4?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBIaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAOs5IZBC34qxkplBZzovNiDgpK4j%2BOYwQnt%2FDeI6EKdYAiBwHireSqO6FKLsdakI8xoAhOjeEE3Y1ZBgnhEwikmNlCrkAghrEAAaDDM0NTk0MDYyNDI2NiIMLmrixOr4OFmF1bioKsECamuBaW5QvYBUlJuiLAC4%2F4FYsirqZXm3p%2Ff7%2BO9qlTp%2BYBK%2BMEziOvWiUgzhUskpc50v4irt2Ck94pWzxrl%2FJWqHF9iLtlfV9hGI90LhS18V%2BaKZZb0mArhlEgElFFavmJAvo3JMphY1UalWbYBpZqekOBKTjRYCSvq4ctYVvwUxOvu5rmVoaHbOsmpoCIERoTs79ZVacuTolXa1k9ECmdxghynPIfypxA3KCLEPzIQbQ2kgFqhcBU%2BtNmy%2BKWWIaNKZMBx59CSu3AJUWDt6r%2BbddPzeQ5dc8auV7u%2F3dzTwnmyTHLurtG59iM%2BkbEb7v5hcaoF208Rdb%2F%2BtK7oWQLKe7GOPd8%2BvbzyDwhCNJobsvPTA1Khr5frqalmit%2FjH%2BxZywij5DT1kIYz0FIYu2FdXaiG43ov%2FIZ9Tho4ZmpvLMLGL0bEGOrMCUJB%2F5r8s3z0CoKlATBaSWXoqy6qHVmL8hIhGRUUjEs1DE62RgQeG5wPhMyvCyAhg5ZImopG%2B4svleWatMVrZK4%2FoSVQ0rRPidIT4r0QFJnnm7hK2%2F%2Bd0vkBpwXVlzOZy2X4PlAHVyddiUAH9O0QWqSbKeOfFL9mQm0y0IX6cx9%2BeWzzR4qzd%2FIk4t7a39yadi14JZPf7K%2FhvuM7eDLngQ86N5fQNs6yLgww7PUB%2B3ovBwW%2BEL%2BjUaMSXEzdnL114dV7xwvX%2FAkqZRKs6jeqxxuZCq4a%2BZg9ni1PQtPOzRWhM3ev5ti%2B4Nbe%2BCKHQn%2F3OO1Qgd77y5ShF8RBqaOQ5XL1ZY%2FpNOuqUn%2B7jKAnC4vlzt%2FITrcvml%2BUa5wB5AhsGbZUBHzmfYZOnVDKevFH%2BazoONA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240503T020237Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAVBC5LAOFA6GTDZJ2%2F20240503%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Signature=09bc3034a31620253c07f2c91b6e1e487068bb0bb97e08ffb8a2daf9670013d4)](https://record-project.s3.ap-southeast-2.amazonaws.com/demo1-done.mp4?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBIaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAOs5IZBC34qxkplBZzovNiDgpK4j%2BOYwQnt%2FDeI6EKdYAiBwHireSqO6FKLsdakI8xoAhOjeEE3Y1ZBgnhEwikmNlCrkAghrEAAaDDM0NTk0MDYyNDI2NiIMLmrixOr4OFmF1bioKsECamuBaW5QvYBUlJuiLAC4%2F4FYsirqZXm3p%2Ff7%2BO9qlTp%2BYBK%2BMEziOvWiUgzhUskpc50v4irt2Ck94pWzxrl%2FJWqHF9iLtlfV9hGI90LhS18V%2BaKZZb0mArhlEgElFFavmJAvo3JMphY1UalWbYBpZqekOBKTjRYCSvq4ctYVvwUxOvu5rmVoaHbOsmpoCIERoTs79ZVacuTolXa1k9ECmdxghynPIfypxA3KCLEPzIQbQ2kgFqhcBU%2BtNmy%2BKWWIaNKZMBx59CSu3AJUWDt6r%2BbddPzeQ5dc8auV7u%2F3dzTwnmyTHLurtG59iM%2BkbEb7v5hcaoF208Rdb%2F%2BtK7oWQLKe7GOPd8%2BvbzyDwhCNJobsvPTA1Khr5frqalmit%2FjH%2BxZywij5DT1kIYz0FIYu2FdXaiG43ov%2FIZ9Tho4ZmpvLMLGL0bEGOrMCUJB%2F5r8s3z0CoKlATBaSWXoqy6qHVmL8hIhGRUUjEs1DE62RgQeG5wPhMyvCyAhg5ZImopG%2B4svleWatMVrZK4%2FoSVQ0rRPidIT4r0QFJnnm7hK2%2F%2Bd0vkBpwXVlzOZy2X4PlAHVyddiUAH9O0QWqSbKeOfFL9mQm0y0IX6cx9%2BeWzzR4qzd%2FIk4t7a39yadi14JZPf7K%2FhvuM7eDLngQ86N5fQNs6yLgww7PUB%2B3ovBwW%2BEL%2BjUaMSXEzdnL114dV7xwvX%2FAkqZRKs6jeqxxuZCq4a%2BZg9ni1PQtPOzRWhM3ev5ti%2B4Nbe%2BCKHQn%2F3OO1Qgd77y5ShF8RBqaOQ5XL1ZY%2FpNOuqUn%2B7jKAnC4vlzt%2FITrcvml%2BUa5wB5AhsGbZUBHzmfYZOnVDKevFH%2BazoONA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240503T020237Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAVBC5LAOFA6GTDZJ2%2F20240503%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Signature=09bc3034a31620253c07f2c91b6e1e487068bb0bb97e08ffb8a2daf9670013d4)
+## Tóm tắt project
+Project là một data pipeline xử lý được đồng thời dữ liệu stream và dữ liệu batch theo cấu trúc micro-services. Các công cụ thịnh hành hiện giờ trong xử lý big data được sử dụng, ví dụ như spark và kafka,... Dữ liệu đầu vào không có thực mà được giả lập.
+## Diagram của Data pipeline
+![[gif-diagram.gif]]
 
-</aside>
+## Cấu trúc của Data pipline
+Data pipeline này có thể được chia làm 
+- Phần tiếp nhận event: 
+	Bao gồm 
+	- Cổng api của thư viện fastapi trong python, được kết nối với kafka producer. Khi data được gửi qua cổng /order thì kafka producer được trigger để truyền data đi tiếp.
+	- Kafka producer nhận event được truyền qua cổng api (user tạo order), sau đó thêm data vào 1 topic mà pyspark consumer đang subcribe.
+	- Pyspark consumer subscribe topic của kafka và thực hiện hai tác vụ: gửi data vào datalake và gửi data vào nhánh streaming.
+- Phần streaming:
+	- Pyspark sau khi nhận thấy có data mới trong topic sẽ thực hiện structured streaming. Consumer này sẽ lấy data về customer và product từ Postgres, gom các thông tin này vào cùng với order của customer và gửi vào Mongodb. Việc làm này là để document trong Mongodb chứa đủ các thông tin cần thiết, chứ không chỉ thông tin về order.
+	- Dữ liệu thực sẽ được cập nhật trên dashboard của streamlit. Dashboard này chứa một số thông tin như: tổng sale, order, distinct customer hiện tại. Trendline của category sản phẩm. Order của bất kỳ customer cụ thể nào. Và cuối cùng là phần hiển thị những sản phẩm hiện có nhu cầu tăng đột biến.
+	- Để phát hiện các sản phẩm có nhu cầu tăng đột biến, một script python sẽ được schedule để thực hiện trong 1 khoảng thời gian (ở đây ví dụ là 1 ngày). Script này sẽ tổng hợp demand của tất cả sản phẩm được mua trong vòng 1 ngày qua và lưu trữ thông tin này trong một collection ở Mongodb. Sau đó, nó sẽ kiểm tra xem nhu cầu trong 1 ngày vừa qua có tăng đột biến so với những ngày trong quá khứ không. Tăng đột biến là khi demand lớn hơn 95 percentile của dữ liệu quá khứ sản phẩm đó. Nếu có sự tăng đột biến thì sẽ update lên dashboard streamlit.
+- Phần batching:
+	- Pyspark consumer tiếp nhận data và lập tức lưu trữ trong S3 như một data lake. 
+	- Sau một khoảng thời gian (ở đây ví dụ là 1 ngày), một Airflow DAG sẽ chạy để lấy dữ liệu từ S3 truyền vào Snowflake. Dữ liệu trong S3 có thể được data analyst, data scientist trích xuất để phân tích. Dữ liệu này chưa được transform nên đây là ELT pipeline.
+	- Snowflake là một datawarehouse và có thể được dùng để thực hiện các dashboard phân tích dữ liệu quá khứ hay được trích xuất cho các phòng ban nếu cần.
+- Micro-services:
+	Docker container được sử dụng trong đa số ứng dụng.
